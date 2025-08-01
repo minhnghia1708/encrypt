@@ -14,15 +14,22 @@
 <body>
 	<div class="main">
 		<div class="encrypt">
-			<img src="app/assets/lock.png">
-			<h2>Encrypt</h2>
+			<div style="display: flex; margin-bottom: 20px;">
+				<img src="app/assets/lock.png" style="width: 60px; height: 60px;" alt="Lock Icon">
+				<h2 style="margin-top: 30px; margin-left: 20px;">Encrypt & Decrypt</h2>
+			</div>
+
 			<div id="item">
-				<input type="text" id="apiBaseUrl" placeholder="Nhập API Base URL (vd: https://localhost:7131)" style="width: 100%; margin-bottom: 10px;" value="http://10.10.9.223:4322/Encrypt">
-				<input type="text" id="plaintext" placeholder="Enter text to encrypt" style="width: 100%; margin-bottom: 10px;">
-				<input type="text" id="ciphertext" placeholder="Enter text to decrypt" style="width: 100%; margin-bottom: 10px;">
-				<input type="text" id="passphrase" placeholder="Enter passphrase" style="width: 100%; margin-bottom: 10px;" value="TAC@#$2008">
-				<p><strong>Encrypted:</strong> <span id="encryptedText"></span></p>
-				<p><strong>Decrypted:</strong> <span id="decryptedText"></span></p>
+				<input type="text" id="apiBaseUrl" placeholder="Nhập API Base URL (vd: https://localhost:7131)"
+					style="width: 100%; margin-bottom: 10px;" value="http://10.10.9.223:4322/Encrypt">
+				<input type="text" id="plaintext" placeholder="Enter text to encrypt"
+					style="width: 100%; margin-bottom: 10px;">
+				<input type="text" id="ciphertext" placeholder="Enter text to decrypt"
+					style="width: 100%; margin-bottom: 10px;">
+				<input type="password" id="passphrase" placeholder="Enter passphrase"
+					style="width: 100%; margin-bottom: 10px;" value="TAC@#$2008">
+				<p><strong>Encrypted: <a id="encryptedText" style="color: brown;"></a></strong></p>
+				<p><strong>Decrypted: <a id="decryptedText"></a></strong></p>
 				<div style="display: flex; float: right;">
 					<button onclick="handleDecrypt()">Decrypt</button>
 					<button onclick="handleEncrypt()">Encrypt</button>
